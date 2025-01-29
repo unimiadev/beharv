@@ -1,0 +1,30 @@
+.header {
+ 
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    justify-content: space-between;
+  }
+
+  .left-section {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-button {
+    order: 2;
+  }
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .nav-right {
+    gap: 12px;
+  }
+} 

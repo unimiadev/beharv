@@ -1,0 +1,54 @@
+.landing-page {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+.landing-page section:not(:first-child) {
+  padding-top: 80px;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .landing-page section:not(:first-child) {
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-page section:not(:first-child) {
+    padding-top: 40px;
+  }
+} 

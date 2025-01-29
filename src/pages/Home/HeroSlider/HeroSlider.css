@@ -1,0 +1,177 @@
+.hero-container {
+  width: 100%;
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-slider {
+  width: 75%;
+  max-width: 1200px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  aspect-ratio: 16/9;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #f8f9fa;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide-content {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  text-align: left;
+}
+
+.slide-content h1 {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.5s forwards;
+  animation-delay: 0.2s;
+}
+
+.slide-content p {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.5s forwards;
+  animation-delay: 0.4s;
+}
+
+.slide-content .cta-button {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: #850212;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 1.2em;
+  transition: background-color 0.3s;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.5s forwards;
+  animation-delay: 0.6s;
+}
+
+.slide-content .cta-button:hover {
+  background-color: #0056b3;
+}
+
+.slider-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: white;
+  transform: scale(1.2);
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-container {
+    padding: 80px 0 80px;
+  }
+  .hero-slider {
+    width: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    padding: 80px 0 80px;
+  }
+
+  .hero-slider {
+    width: 85%;
+    border-radius: 12px;
+    margin: 0;
+  }
+
+  .slide-content h1 {
+    font-size: 2.5em;
+  }
+
+  .slide-content p {
+    font-size: 1.2em;
+  }
+
+  .slide-content .cta-button {
+    padding: 12px 30px;
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container {
+    padding: 70px 0 10px;
+  }
+
+  .hero-slider {
+    border-radius: 8px;
+    width: 95%;
+    margin: 0;
+  }
+
+  .slide-content h1 {
+    font-size: 2em;
+  }
+
+  .slide-content p {
+    font-size: 1em;
+  }
+
+  .slide-content .cta-button {
+    padding: 10px 25px;
+    font-size: 1em;
+  }
+} 

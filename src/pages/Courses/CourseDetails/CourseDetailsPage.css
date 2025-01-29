@@ -1,0 +1,12 @@
+
+.course-details-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+}
+
+
+.course-details-page > :nth-child(2) {
+  flex: 1;
+} 

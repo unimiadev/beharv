@@ -1,0 +1,162 @@
+.features-section {
+  padding: 80px 20px;
+  background-color: #ffffff;
+  position: relative;
+  margin-top: 40px;
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 0 15px;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 40px 30px;
+  margin-bottom: 85px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  border: 1px solid #e0e0e0;
+  opacity: 1;
+  transform: none;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #850212;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+.feature-card:hover::before {
+  transform: scaleX(1);
+}
+
+.feature-icon {
+  font-size: 24px;
+  color: #850212;
+  margin: 0 auto 20px;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.feature-icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.1);
+}
+
+.feature-card h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .features-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .features-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .feature-card {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-section {
+    padding: 60px 15px;
+  }
+
+  .features-container {
+    padding: 0 10px;
+    gap: 20px;
+  }
+
+  .feature-card {
+    padding: 30px 20px;
+  }
+
+  .feature-icon {
+    font-size: 22px;
+    height: 50px;
+    width: 50px;
+  }
+
+  .feature-card h3 {
+    font-size: 1.3em;
+  }
+
+  .feature-card p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-section {
+    padding: 0px 0px;
+  }
+
+  .features-container {
+    padding: 0 15px;
+    gap: 15px;
+  }
+
+  .feature-card {
+    padding: 25px 15px;
+  }
+
+  .feature-icon {
+    font-size: 20px;
+    height: 45px;
+    width: 45px;
+  }
+
+  .feature-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  .feature-card p {
+    font-size: 0.9em;
+  }
+}

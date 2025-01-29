@@ -1,0 +1,238 @@
+
+.course-reviews {
+  margin-top: 40px;
+}
+
+
+.course-reviews h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+.reviews-summary {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+
+.rating-overview {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.average-rating {
+  text-align: center;
+  min-width: 150px;
+  padding-right: 40px;
+  border-right: 1px solid #dee2e6;
+}
+
+.big-rating {
+  font-size: 3em;
+  font-weight: bold;
+  color: #333;
+  line-height: 1;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.rating-stars {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.rating-stars .stars {
+  color: #ffd700;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+
+.total-ratings {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.rating-bars {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rating-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stars-label {
+  width: 80px;
+  text-align: right;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.rating-bar {
+  flex: 1;
+  height: 8px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.rating-fill {
+  height: 100%;
+  background-color: #ffd700;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.rating-count {
+  width: 30px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.review-item {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.reviewer-info {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  background-color: #850212;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.reviewer-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.reviewer-name {
+  font-weight: 500;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.review-date {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.review-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.review-rating .stars {
+  color: #ffd700;
+  letter-spacing: 2px;
+  font-size: 1.1em;
+}
+
+.review-rating .rating-number {
+  font-weight: 500;
+  color: #333;
+}
+
+.review-content {
+  color: #444;
+  line-height: 1.6;
+  font-size: 1em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.no-reviews {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  font-size: 1.1em;
+}
+
+.skeleton {
+  height: 120px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 12px;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@media (max-width: 768px) {
+  .rating-overview {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .average-rating {
+    padding-right: 0;
+    padding-bottom: 24px;
+    border-right: none;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .stars-label {
+    width: 60px;
+    font-size: 0.8em;
+  }
+
+  .review-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .review-rating {
+    align-self: flex-start;
+  }
+} 

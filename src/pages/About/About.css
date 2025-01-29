@@ -1,0 +1,265 @@
+.about-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.header-decoration {
+  margin-bottom: 30px;
+}
+
+.decoration-circle {
+  width: 60px;
+  height: 60px;
+  border: 4px solid #850212;
+  border-radius: 50%;
+  margin: 0 auto;
+  opacity: 0.2;
+  animation: pulse 2s infinite;
+}
+
+.decoration-line {
+  width: 2px;
+  height: 40px;
+  background: linear-gradient(to bottom, #850212, transparent);
+  margin: 10px auto;
+  opacity: 0.2;
+}
+
+.about-title {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  font-weight: 800;
+  background: linear-gradient(45deg, #850212, #bb5a66);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.title-underline {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(45deg, #850212, #bb5a66);
+  margin: 20px auto;
+  border-radius: 2px;
+}
+
+.header-subtitle {
+  font-size: 1.2em;
+  color: #666;
+  max-width: 600px;
+  margin: 20px auto 0;
+  line-height: 1.6;
+}
+
+.sections-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.about-section {
+  position: relative;
+}
+
+.content-wrapper {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(133, 2, 18, 0.1);
+}
+
+.content-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+.section-number {
+  position: absolute;
+  top: -20px;
+  right: 30px;
+  font-size: 6em;
+  font-weight: 800;
+  background: linear-gradient(45deg, #850212, #bb5a66);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.1;
+}
+
+.content-header {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.content-header h2 {
+  font-size: 2em;
+  color: #850212;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.section-decoration {
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(45deg, #850212, #bb5a66);
+  border-radius: 2px;
+}
+
+.about-content p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  color: #444;
+  position: relative;
+  z-index: 2;
+}
+
+.geometric-pattern {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0.1;
+}
+
+.pattern-circle {
+  width: 100px;
+  height: 100px;
+  border: 3px solid #850212;
+  border-radius: 50%;
+}
+
+.pattern-line {
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background: #850212;
+  transform: rotate(45deg);
+  top: 50%;
+  left: -20px;
+}
+
+.background-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.decoration-shape {
+  position: absolute;
+  background: linear-gradient(45deg, #850212, #bb5a66);
+  border-radius: 50%;
+  opacity: 0.03;
+}
+
+.shape-1 {
+  width: 400px;
+  height: 400px;
+  top: -200px;
+  left: -200px;
+}
+
+.shape-2 {
+  width: 500px;
+  height: 500px;
+  top: 40%;
+  right: -250px;
+}
+
+.shape-3 {
+  width: 300px;
+  height: 300px;
+  bottom: -150px;
+  left: 10%;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 60px 20px;
+  }
+
+  .about-title {
+    font-size: 2.5em;
+  }
+
+  .content-wrapper {
+    padding: 30px;
+  }
+
+  .section-number {
+    font-size: 4em;
+    top: -10px;
+    right: 20px;
+  }
+
+  .content-header h2 {
+    font-size: 1.6em;
+  }
+
+  .about-content p {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 2em;
+  }
+
+  .header-subtitle {
+    font-size: 1em;
+  }
+
+  .content-wrapper {
+    padding: 25px;
+  }
+
+  .section-number {
+    font-size: 3em;
+  }
+
+  .content-header h2 {
+    font-size: 1.4em;
+  }
+
+  .about-content p {
+    font-size: 1em;
+  }
+} 
