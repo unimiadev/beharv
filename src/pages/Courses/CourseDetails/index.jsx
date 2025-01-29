@@ -211,16 +211,16 @@ const CourseDetails = () => {
                 </div>
 
                 <div className="features-section">
-                  <h3>{t('courses.details.courseInfo.whatsIncluded')}</h3>
-                  <ul>
-                    {(course.features || defaultFeatures).map((feature, index) => (
-                      <li key={index}>
-                        <i className="fas fa-check"></i>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <h3>{t('courses.details.courseInfo.whatsIncluded')}</h3>
+                <ul>
+                  {(defaultFeatures).map((feature, index) => (
+                    <li key={index}>
+                      <i className="fas fa-check"></i>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
               </div>
             </div>
 
