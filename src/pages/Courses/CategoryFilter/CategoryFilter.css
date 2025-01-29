@@ -257,6 +257,10 @@
     color: #850212;
     margin-right: 8px;
   }
+
+  .fas.fa-filter {
+    color: #ffffff;
+  }
 }
 
 @media (max-width: 480px) {
@@ -294,7 +298,7 @@
 }
 
 .filter-button-mobile:hover {
-  background-color: #0056b3;
+  background-color: #c18c8c;
 }
 
 
@@ -360,7 +364,7 @@
 }
 
 .apply-filters-button:hover {
-  background-color: #0056b3;
+  background-color: #c18c8c;
 }
 
 
